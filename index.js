@@ -3,8 +3,32 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 // TODO: Create an array of questions for user input
 // const questions = [];
+const writeReadme = (response) => {
+return `# ${response.title}
+
+## Description
+    
+${response.description}
+    
+## Installation
+    
+${response.installation}
+    
+## Usage
+    
+${response.usage}
+    
+## Credits
+    
+${response.contributors}
+    
+## License
+
+${response.license}`
+}
+
 inquirer
-    .createPromptModule([
+    .prompt([
         {
             type: 'input',
             name: 'title',
@@ -20,14 +44,33 @@ inquirer
             name: 'installation',
             message: 'Please enter installation instructions',
         },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Please enter how to use the application',
+        },
+        {
+            type: 'input',
+            name: 'contributors',
+            message: 'Please credit any contributors to the application',
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Please enter any licenses',
+        },
     ])
-    .then((data))
+    .then((response) => {
+        const readmeContent = writeReadme(response)
+        console.log(readmeContent);
+        fs.writeFile('README.md', readmeContent, (err) =>
+        err ? console.error(err) : console.log('Success!'));
+    })
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 // Function call to initialize app
-init();
+//init();
