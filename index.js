@@ -24,7 +24,12 @@ ${response.contributors}
     
 ## License
 
-${response.license}`
+${response.license}
+
+## Questions
+
+If you have any questions, please email me at: ${response.email}
+Check out other projects of mine on my GitHub profile! @${response.github}`
 }
 
 inquirer
@@ -59,6 +64,16 @@ inquirer
             name: 'license',
             message: 'Please enter any licenses',
         },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter an email that people can contact you at with any questions',
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Please enter your github username',
+        },
     ])
     .then((response) => {
         const readmeContent = writeReadme(response)
@@ -67,10 +82,3 @@ inquirer
         err ? console.error(err) : console.log('Success!'));
     })
 
-// TODO: Create a function to write README file
-
-// TODO: Create a function to initialize app
-//function init() {}
-
-// Function call to initialize app
-//init();
