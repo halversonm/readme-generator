@@ -29,7 +29,7 @@ ${response.license}
 ## Questions
 
 If you have any questions, please email me at: ${response.email}
-Check out other projects of mine on my GitHub profile! @${response.github}`
+\nCheck out other projects of mine on my GitHub profile! @${response.github}`
 }
 
 inquirer
