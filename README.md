@@ -10,7 +10,7 @@ To install this project you must clone the code from the index.js file in this r
     
 ## Usage
     
-Once you have all of the above things installed, to use the README generator all you need to do is enter 'node index.js' in your terminal (make sure you are in the README generator's working directory). Then a series of prompts will ask you about the project. After answering these questions, the generator will create a profesionally formatted README.md file with all of your answers included. A short video showing how to use the README generator has been included. 
+Once you have all of the above things installed, to use the README generator all you need to do is enter 'node index.js' in your terminal (make sure you are in the README generator's working directory). Then a series of prompts will ask you about the project. After answering these questions, the generator will create a profesionally formatted README.md file with all of your answers included. Use this link to view a short walkthrough video of the README generator: https://youtu.be/qQ6RCE-R33s
     
 ## Credits
     
